@@ -1,6 +1,6 @@
 const handleSignin = (db, bcrypt) => (req, res) => {
 	const { email, password } = req.body;
-	if (!email || !pasword) {
+	if (!email || !password) {
 		return res.status(400).json('cannot signin');
 	}
 	db.select('*').from('login')
